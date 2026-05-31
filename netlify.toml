@@ -1,0 +1,19 @@
+[[redirects]]
+  from = "/api/generate-content"
+  to = "/.netlify/functions/generate-content"
+  status = 200
+
+[[redirects]]
+  from = "/api/send-campaign"
+  to = "/.netlify/functions/send-campaign"
+  status = 200
+
+[[redirects]]
+  from = "/api/health-score"
+  to = "/.netlify/functions/health-score"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

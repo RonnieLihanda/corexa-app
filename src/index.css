@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background: #0A0A0F;
+    color: #F1F5F9;
+    font-family: Inter, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: #F5A623;
+    color: #0A0A0F;
+  }
+}
+
+/* === COREXA GLOBAL CARD STYLES === */
+
+.cx-card {
+  background: #111827;
+  border: 1px solid #1E2535;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.cx-card-gold {
+  background: #111827;
+  border: 1px solid #1E2535;
+  border-left: 3px solid #F5A623;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.cx-section {
+  background: #0A0A0F;
+  padding: 32px;
+}
+
+.cx-label {
+  color: #64748B;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.cx-input {
+  width: 100%;
+  background: #0A0A0F;
+  border: 1px solid #1E2535;
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #F1F5F9;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  font-family: inherit;
+}
+
+.cx-input:focus {
+  border-color: #F5A623;
+}
+
+.cx-btn-primary {
+  background: #F5A623;
+  color: #000000;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cx-btn-secondary {
+  background: transparent;
+  color: #94A3B8;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 1px solid #1E2535;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cx-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.cx-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.cx-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.cx-stat-number {
+  color: #F5A623;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.cx-page-title {
+  color: #F1F5F9;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.cx-text-muted {
+  color: #64748B;
+  font-size: 14px;
+}
+
+.cx-gold {
+  color: #F5A623;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* === RESPONSIVE === */
+
+@media (max-width: 1024px) {
+  .cx-grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .cx-grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .cx-grid-4 { grid-template-columns: 1fr; }
+  .cx-grid-3 { grid-template-columns: 1fr; }
+  .cx-grid-2 { grid-template-columns: 1fr; }
+}
+
+/* === SIDEBAR RESPONSIVE === */
+
+.sidebar-desktop {
+  display: flex;
+}
+
+.sidebar-mobile-overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar-desktop {
+    display: none;
+  }
+  .sidebar-mobile-overlay.open {
+    display: flex;
+    position: fixed;
+    z-index: 200;
+  }
+  .main-content {
+    margin-left: 0 !important;
+  }
+}
+
+/* Custom premium styles retained for legacy pages during migration */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 37, 53, 0.6);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF 0%, #F5A623 50%, #B87333 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #F5A623 0%, #D48806 100%);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0F;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E2535;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F5A623;
+}
